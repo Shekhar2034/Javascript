@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    /*{name : "awdiz"} - javascript 
+    {"name" : "awdiz"} - json */
+    //localStorage (key and name)
+    localStorage.setItem("name", "awdiz");
+    localStorage.setItem("list", "[1,2,3,4]");
+
+    const dataFromLS = localStorage.getItem("name"); //to get value of key
+    console.log(dataFromLS,"dataFromLS")
+    const dataFromLS2 = localStorage.getItem("list");
+    console.log(dataFromLS2,"dataFromLS2")
+
+    localStorage.removeItem("name") //to remove data
+
+    localStorage.clear(); // to remove all value database
+
+
+    //to convert js code to json use stringify
+    var myData = {"name" : "awdiz"};
+    var jsonData = JSON.stringify(myData);
+    console.log(jsonData);
+
+    //to convert json code to js use parse
+    var jsData = JSON.parse(jsonData)
+    console.log(jsData)
+
+    var myData = {name : "awdiz", email: "abc@gmai.com", password: "pass@123"}
+    localStorage.setItem("data" , JSON.stringify(myData))
+
+    const mydata = JSON.parse(localStorage.getItem("data"));
+    console.log(mydata)
+    console.log(mydata?.name)
+
+</script>
+</html>
